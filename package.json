@@ -1,0 +1,64 @@
+{
+  "name": "@orivium/smart-contracts",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "slither": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin' --exclude naming-convention,external-function,low-level-calls",
+    "slither:full": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin'",
+    "compile": "hardhat compile",
+    "test": "hardhat test --typecheck",
+    "deploy": "hardhat run scripts/deployment/main.ts",
+    "start:local": "hardhat node",
+    "typechain": "sh ./build-typechain.sh"
+  },
+  "devDependencies": {
+    "@chainlink/contracts": "0.5.1",
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.1",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@nomicfoundation/hardhat-ledger": "^1.0.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.3",
+    "@nomiclabs/hardhat-solhint": "^3.0.1",
+    "@openzeppelin/contracts": "^4.8.2",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.3.6",
+    "@types/jest": "^29.5.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "ethers": "^6.9.0",
+    "hardhat": "^2.16.1",
+    "hardhat-deploy": "^0.11.37",
+    "hardhat-deploy-ethers": "^0.4.1",
+    "hardhat-gas-reporter": "^1.0.9",
+    "husky": "^8.0.1",
+    "merkletreejs": "^0.3.10",
+    "prettier": "^2.8.8",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^3.4.1",
+    "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "resolutions": {
+    "@typescript-eslint/typescript-estree": "^5.60.0"
+  }
+}
